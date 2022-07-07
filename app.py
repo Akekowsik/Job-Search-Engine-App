@@ -1,7 +1,7 @@
 from flask import Flask, redirect,render_template,request,url_for,redirect
 import requests 
 from bs4 import BeautifulSoup
-#from gtts import gTTS
+from gtts import gTTS
 from playsound import playsound
 
 
@@ -11,13 +11,13 @@ UPLOAD_FOLDER = 'static'
 
 app.config['UPLOAD_FOLDER'] = 'UPLOAD FOLDER'
 
-#my_text = 'Welcome to Job Search!'
-#myobj = gTTS(text = my_text,lang = 'en',slow = False)
-#myobj.save("welcome.mp3")
+my_text = 'Welcome to Job Search!'
+myobj = gTTS(text = my_text,lang = 'en',slow = False)
+myobj.save("welcome.mp3")
 
-#my_text = 'All Job Offers in your intersted skill are'
-#myobj = gTTS(text = my_text,lang = 'en',slow = False)
-#myobj.save("offers.mp3")
+my_text = 'All Job Offers in your intersted skill are'
+myobj = gTTS(text = my_text,lang = 'en',slow = False)
+myobj.save("offers.mp3")
 
 @app.route('/',methods=['POST', 'GET'])
 
