@@ -1,1 +1,1 @@
-web:gunicorn wsgi:app
+web:python job-search-engine-app/wsgi.py
