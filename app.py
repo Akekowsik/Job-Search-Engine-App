@@ -24,11 +24,11 @@ app.config['UPLOAD_FOLDER'] = 'UPLOAD FOLDER'
 def index():
     if request.method == 'POST':
         sk = request.form['skill']
-        playsound('./static/offers.mp3')
+        playsound('static/offers.mp3')
         return redirect(url_for('search',req = sk))
     else:
         
-        playsound('./static/welcome.mp3')
+        playsound('static/welcome.mp3')
         return render_template('open.html')
 
 @app.route('/search/<req>',methods=['GET'])
