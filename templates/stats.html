@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Offers</title>
+    <link rel="stylesheet" href="../static/stats.css">
+</head>
+<body>    
+    <h2 style ="text-align: center;">Job Offers in your Interested Skill </h2>
+    {% for job in data %}
+    <div class="job">
+        <p><bold>Company Name</bold> : {{job['Company Name']}}</p>
+        <p><bold>Job Role</bold> : {{job['Job_Role']}}</p>
+        <p><bold>Skills</bold> : {{job["Remaining Skills Required"]}}</p>
+        <p><bold>Time</bold> : {{job["Time Since Posted"]}}</p>
+        <p><a href={{job["More_Info"]}}> Click Me ! For more information .</a></p>
+    </div>
+    {% endfor %}
+    <a href="/">Go Back</a>
+</body>
+</html>

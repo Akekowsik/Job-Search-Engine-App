@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Search Engine</title>
+    <link rel="stylesheet" href="../static/open.css">
+</head>
+<body>
+    <h1 style = "color: black; text-align: center;">Welcome to our page Job Search !</h1>
+    <h2 style = "color: black; text-align: center;">Enter your Skill</h2>
+    <form action="{{url_for('index')}}" method="POST" style="text-align: center">
+        <h3><input type="text" name="skill" id="skill" onchange="skill()"></h3><br><br>
+        <button onclick="findjobs()">Find Jobs</button>
+    </form>
+    <script>
+        var skillname = ''
+        const skill = (e) => {skillname = e.target.name};
+        const findjobs = () => {
+            window.location.href = '/search/' + skill
+        }
+    </script>
+</body>
+</html>

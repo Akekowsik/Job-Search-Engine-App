@@ -1,0 +1,32 @@
+body{
+    background: url(job.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+h2{
+    font-size: 32px;
+    font-family: monospace;
+    text-decoration: underline;
+    margin-bottom: 12px;
+}
+
+.job{
+    position: relative;
+    border-width: 2px;
+    border-style: solid;
+    border-color : black;
+    font-family: monospace;
+    width:90%;
+    left:5%;
+    margin:24px 0px;
+    font-size: 18px;
+    padding: 24px;
+}
+
+.job p bold{
+    font-weight: bold;
+    display: inline;
+}
