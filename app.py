@@ -1,8 +1,6 @@
 from flask import Flask, redirect,render_template,request,url_for,redirect
 import requests 
 from bs4 import BeautifulSoup
-from gtts import gTTS
-from playsound import playsound
 
 
 app = Flask(__name__)
@@ -11,24 +9,15 @@ UPLOAD_FOLDER = 'static'
 
 app.config['UPLOAD_FOLDER'] = 'UPLOAD FOLDER'
 
-my_text = 'Welcome to Job Search!'
-myobj = gTTS(text = my_text,lang = 'en',slow = False)
-myobj.save("welcome.mp3")
-
-my_text = 'All Job Offers in your intersted skill are'
-myobj = gTTS(text = my_text,lang = 'en',slow = False)
-myobj.save("offers.mp3")
 
 @app.route('/',methods=['POST', 'GET'])
 
 def index():
     if request.method == 'POST':
         sk = request.form['skill']
-        playsound('static/offers.mp3')
         return redirect(url_for('search',req = sk))
     else:
-        
-        playsound('static/welcome.mp3')
+    
         return render_template('open.html')
 
 @app.route('/search/<req>',methods=['GET'])
