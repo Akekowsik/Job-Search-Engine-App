@@ -1,1 +1,1 @@
-web:python job-search-engine-app/wsgi.py
+web:python wsgi.py
