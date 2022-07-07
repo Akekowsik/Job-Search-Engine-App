@@ -1,5 +1,5 @@
 from flask import Flask, redirect,render_template,request,url_for,redirect
-import requests
+import requests 
 from bs4 import BeautifulSoup
 #from gtts import gTTS
 #from playsound import playsound
@@ -59,4 +59,7 @@ def search(req):
 
     return render_template('stats.html',data = jobs_data)
 
-        
+
+if __name__ == "__main__" :
+    
+    app.run()
