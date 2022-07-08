@@ -1,9 +1,24 @@
-body{
-    background: url(job.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-attachment: fixed;
-    background-position: center;
+@media screen and (max-width: 720px) {
+    
+    body{
+        background: url(new.jpg);
+        background-color: lightgray;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-attachment: fixed;
+        background-position: center;
+    }    
+}
+
+@media screen and (min-width: 992px) {
+    body{
+        background: url(job.jpg);
+        background-color: lightskyblue;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-attachment: fixed;
+        background-position: center;
+    }
 }
 
 button{
